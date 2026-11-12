@@ -1,49 +1,58 @@
-# Quick Clear - Chrome Extension
+<div align="center">
 
-A modern, fast extension to clear browser history, downloads, and site-specific data (cookies, storage).
+<img src="public/icons/icon-128.png" width="128" alt="Quick Clear logo">
 
-⏬ Download the latest version [here](https://github.com/dinhanhthi/quick-clear-chrome/releases/download/v1.4.0/quick-clear-chrome-v1.4.0.zip).
+# Quick Clear
+
+Clear browser history, downloads and site data in one click, in Chrome.
+
+[![Download](https://img.shields.io/badge/Download-Chrome-black?style=for-the-badge&logo=googlechrome)](https://github.com/dinhanhthi/quick-clear-chrome/releases/latest)
+
+</div>
+
+<div align="center">
+<img src="public/screenshot.png" alt="Quick Clear popup" width="500">
+</div>
 
 ## Features
 
-- **Manual Clear**: Clear history, downloads, or everything with customizable time ranges (last hour, 24 hours, 7 days, 4 weeks, all time)
-- **Auto Clear**: Schedule automatic cleaning at set intervals (minutes/hours/days)
-- **Site-Specific Cleaner**: Clear data for specific domains or the current active site
-- **Dark Mode Support**: Seamless light/dark theme switching
-- **Playground** (dev only): A simple UI to test the extension in development.
+- Manual clear of history, downloads or everything, for the last hour, 24 hours, 7 days, 4 weeks or all time.
+- Auto clear at a set interval (minutes, hours or days).
+- Site-specific cleaner: cookies and storage of the current site or of chosen domains.
+- Light and dark themes. Languages: English, Vietnamese, French.
+- Playground (dev only): the popup UI in a normal browser tab.
 
-<img src="./public/screenshot.png" alt="Quick Clear Screenshot" width="500" />
+## Requirements
 
-## Installation
+- Chrome (Manifest V3).
+- Permissions: `browsingData`, `history`, `downloads`, `storage`, `tabs`, `alarms`, `notifications`.
 
-1. If you just want to use [the latest version](https://github.com/dinhanhthi/quick-clear-chrome/releases/download/v1.3.2/quick-clear-chrome-v1.3.2.zip), extract the zip file from `zip/` folder and load it in Chrome.
-2. Open `chrome://extensions`
-3. Enable **Developer mode**
-4. Click **Load unpacked**
-5. Select the `dist/` folder
+## Install
 
-## Development
+1. Download the zip from [Releases](https://github.com/dinhanhthi/quick-clear-chrome/releases/latest) and extract it.
+2. Open `chrome://extensions` and enable **Developer mode**.
+3. Click **Load unpacked** and select the extracted folder (`dist/` when built from source).
 
-### Setup
+## Build
 
-```bash
+```sh
 npm install
 
 # Required for screenshot generation (headless browser)
 npx puppeteer browsers install chrome-headless-shell
+
+npm run build
 ```
 
-### Commands
-
-```bash
-npm run watch      # Watch for changes and rebuild
-npm run dev        # UI development with hot reload
-npm run build      # Build extension to dist/ (includes screenshot generation)
-npm run build:no-screenshot  # Build without regenerating screenshot
-npm run playground # Preview popup UI in browser
-npm run screenshot # Regenerate screenshot.png
-npm run version 1.1.0  # Update version in package.json and manifest.json
-npm run zip        # Create .zip for Chrome Web Store upload
-npm run prettier   # Format code
-npm run lint       # Run ESLint
-```
+| Command                       | What it does                                   |
+| ----------------------------- | ---------------------------------------------- |
+| `npm run watch`               | Watch for changes and rebuild                  |
+| `npm run dev`                 | UI development with hot reload                 |
+| `npm run build`               | Build to `dist/` (also regenerates screenshot) |
+| `npm run build:no-screenshot` | Build without regenerating the screenshot      |
+| `npm run playground`          | Preview the popup UI in a browser              |
+| `npm run screenshot`          | Regenerate `public/screenshot.png`             |
+| `npm run version 1.1.0`       | Update version in package.json and manifest    |
+| `npm run zip`                 | Create the .zip for the Chrome Web Store       |
+| `npm run prettier`            | Format code                                    |
+| `npm run lint`                | Run ESLint                                     |
