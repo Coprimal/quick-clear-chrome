@@ -6,7 +6,7 @@
 
 Clear browser history, downloads and site data in one click, in Chrome.
 
-[![Download](https://img.shields.io/badge/Download-Chrome-black?style=for-the-badge&logo=googlechrome)](https://github.com/dinhanhthi/quick-clear-chrome/releases/latest)
+[![Download](https://img.shields.io/badge/Download-Chrome-black?style=for-the-badge&logo=googlechrome)](https://github.com/Coprimal/quick-clear-chrome/releases/latest)
 
 </div>
 
@@ -29,7 +29,7 @@ Clear browser history, downloads and site data in one click, in Chrome.
 
 ## Install
 
-1. Download the zip from [Releases](https://github.com/dinhanhthi/quick-clear-chrome/releases/latest) and extract it.
+1. Download the zip from [Releases](https://github.com/Coprimal/quick-clear-chrome/releases/latest) and extract it.
 2. Open `chrome://extensions` and enable **Developer mode**.
 3. Click **Load unpacked** and select the extracted folder (`dist/` when built from source).
 
@@ -56,3 +56,7 @@ npm run build
 | `npm run zip`                 | Create the .zip for the Chrome Web Store       |
 | `npm run prettier`            | Format code                                    |
 | `npm run lint`                | Run ESLint                                     |
+
+## Author
+
+Made by [Coprimal](https://coprimal.dev).

@@ -289,7 +289,7 @@ function App() {
             )}
           </button>
           <a
-            href="https://github.com/dinhanhthi/quick-clear-chrome"
+            href="https://github.com/Coprimal/quick-clear-chrome"
             target="_blank"
             rel="noopener noreferrer"
             style={{
