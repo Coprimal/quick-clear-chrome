@@ -1,0 +1,21 @@
+name: Update coprimal.dev
+
+# Redeploys https://coprimal.dev when a release is published, so this tool's card there shows the new version
+# (the site's Pages workflow reads each tool's latest release). Prereleases and drafts don't trigger it.
+# Needs the org secret COPRIMAL_SITE_DEPLOY_TOKEN (see the README of Coprimal/coprimal.dev).
+
+on:
+  release:
+    types: [released]
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  deploy-site:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Start the coprimal.dev deploy
+        env:
+          GH_TOKEN: ${{ secrets.COPRIMAL_SITE_DEPLOY_TOKEN }}
+        run: gh workflow run pages.yml --repo Coprimal/coprimal.dev --ref main
